@@ -33,6 +33,51 @@ enum Color {Red = 5, Green, Blue}; //first will start at the index value of 0 un
 let c: Color = Color.Green;
 console.log(c);
 
+let randomValue: any = 10;
+randomValue = true;
+randomValue = "Sara";
+
+let myVariable: any = 10
+
+console.log(myVariable.name)
+myVariable();
+myVariable.toUpperCase();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

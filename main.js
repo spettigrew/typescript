@@ -27,3 +27,10 @@ var Color;
 ; //first will start at the index value of 0 unless otherwise declared.
 var c = Color.Green;
 console.log(c);
+var randomValue = 10;
+randomValue = true;
+randomValue = "Sara";
+var myVariable = 10;
+console.log(myVariable.name);
+myVariable();
+myVariable.toUpperCase();
