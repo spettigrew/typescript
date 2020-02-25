@@ -12,7 +12,7 @@ let isBeginner: boolean = true;
 let total: number = 0;
 let name: string = "Sara";
 
-let sentence: string = `My name is 4{name}
+let sentence: string = `My name is ${name}
 I am a beginner in Typescript`;
 
 console.log(sentence)
@@ -37,18 +37,90 @@ let randomValue: any = 10;
 randomValue = true;
 randomValue = "Sara";
 
-let myVariable: any = 10
+let myVariable: unknown = 10;
 
-console.log(myVariable.name)
-myVariable();
-myVariable.toUpperCase();
+function hasName(obj: any): obj is { name: string } {
+    return !!obj &&
+        typeof obj === 'object' &&
+        "name" in obj
+}
+    if (hasName(myVariable)) {
+        console.log(myVariable.name);
+    }
+//(myVariable as string).toUpperCase();
 
+let a;
+a = 10;
+a = true;
 
+let b = 20; // intellisense will let us know that 'b' is a number value
 
+//union of types for the same variable
+let multiType: number | boolean;
+multiType = 20
+multiType = true;
 
+let anyType: any;
+anyType = 20;
+anyType = true;
 
+//functions in typescript
 
+function add(num1:number, num2:number = 10): number {
+    if (num2)
+    return num1 + num2;
+    else
+    return num1;
+}
+add(5,10);
+add(5) // you can have any optional parameters, but it must come after the required parameters. (num2 is optional)
 
+//Interface - specify an object as a type in typescript
+interface Person {
+    firstName: string;
+    lastName: string;
+}
+function fullName(person: Person) {
+    console.log(`${person.firstName} ${person.lastName}`)
+}
+
+let p = {
+    firstName: "James",
+    lastName: "Bond"
+}
+
+fullName(p);
+
+//Classes and access modifiers (can be public or private)
+class Employee {
+    public employeeName: string;
+
+    constructor(name: string) {
+        this.employeeName = name;
+    }
+
+    greet() {
+        console.log(`Good Morning ${this.employeeName}`)
+    }
+}
+
+let emp1 = new Employee("Sara")
+console.log(emp1.employeeName)
+emp1.greet()
+
+class Manager extends Employee { //'extends' inherits from first class function
+    constructor(managerName: string) {
+        super(managerName) //'super' keyword used to call the base class constructor. Private can not be accesses outside of the employee class.
+    }
+    delegateWork() {
+        console.log(`Manager delegating tasks ${this.employeeName}`)
+    }
+}
+
+let m1 = new Manager("Bruce")
+m1.delegateWork()
+m1.greet()
+console.log(m1.employeeName)
 
 
 
