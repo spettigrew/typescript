@@ -15,6 +15,7 @@ var __extends = (this && this.__extends) || (function () {
 exports.__esModule = true;
 var message = "Welcome Back!";
 console.log(message);
+//variable declarations
 var x = 10;
 var y = 20;
 var sum;
@@ -24,6 +25,7 @@ var total = 0;
 var name = "Sara";
 var sentence = "My name is " + name + "\nI am a beginner in Typescript";
 console.log(sentence);
+//variable types
 var n = null;
 var u = undefined;
 var isNew = null;

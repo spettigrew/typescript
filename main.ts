@@ -1,7 +1,8 @@
-export {}
+export {} //exports nothing. Typescript will now treat it like a module instead of a script.
 let message = "Welcome Back!";
 console.log(message);
 
+//variable declarations
 let x = 10;
 const y = 20;
 
@@ -17,6 +18,7 @@ I am a beginner in Typescript`;
 
 console.log(sentence)
 
+//variable types
 let n: null = null;
 let u: undefined = undefined;
 
